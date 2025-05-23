@@ -8,6 +8,12 @@ data = {
 
 df = pd.DataFrame(data)
 
+new_row = {"feature": 5, "target": 10}
+df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+
+new_row = {"feature": 6, "target": 12}
+df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
 
